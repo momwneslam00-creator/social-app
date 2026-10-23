@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Facebook-like dark palette */
+.dark,
+[data-theme="dark"] {
+  --background: #18191a;
+  --surface: #242526;
+  --surface-secondary: #3a3b3c;
+  --surface-tertiary: #4e4f50;
+  --overlay: #242526;
+  --field-background: #3a3b3c;
+  --border: #3e4042;
+  --accent: #2d88ff;
+  --accent-foreground: #ffffff;
+}
+
+/* Facebook-like light palette */
+:root:not(.dark):not([data-theme="dark"]) {
+  --background: #f0f2f5;
+  --surface: #ffffff;
+  --accent: #1877f2;
+  --accent-foreground: #ffffff;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+}
